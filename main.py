@@ -21,6 +21,6 @@ async def phonetize_endpoint_post(string: str):
 
 def phonetize(string):
     options = {'aspirateLowTones': False}
-    phon = bophono.UnicodeToApi(schema="KVP", options=options)
+    phon = bophono.UnicodeToApi(schema="LKT", options=options)
     phonetic = phon.get_api(string)
     return {"phonetic": phonetic}
