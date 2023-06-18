@@ -11,15 +11,20 @@
             font-family: 'Noto Serif Tibetan', serif;
             background-color: #f0f0f5;
         }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         #input {
-            padding: 10px 20px;
+            padding: 15px 20px;
             font-size: 24px;
             border: none;
             border-radius: 5px;
             box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
         }
         #button {
-            padding: 10px 20px;
+            padding: 15px 20px;
             font-size: 24px;
             border: none;
             border-radius: 5px;
@@ -35,14 +40,17 @@
         }
         #result {
             margin-top: 20px;
-            font-size: 22px;
+            font-size: 35px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div>
-        <input id="input" type="text">
-        <button id="button" onclick="phonetize()">Phonetize</button>
+    <div class="container">
+        <div>
+            <input id="input" type="text">
+            <button id="button" onclick="phonetize()">Phonetize</button>
+        </div>
         <div id="result"></div>
     </div>
     <script>
@@ -51,6 +59,7 @@
             const response = await fetch(`/phonetize?string=${encodeURIComponent(input)}`);
             const data = await response.json();
             document.getElementById('result').innerHTML = data.phonetic;
+            navigator.clipboard.writeText(data.phonetic);
         }
         document.getElementById('input').addEventListener('keyup', function(event) {
             if (event.key === 'Enter') {
