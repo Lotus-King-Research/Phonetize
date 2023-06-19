@@ -3,4 +3,4 @@ uvicorn
 jinja2
 bophono
 gunicorn
-startlette
+starlette
