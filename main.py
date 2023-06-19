@@ -8,7 +8,8 @@ app = FastAPI()
 
 origins = ['https://localhost:8080',
            'http://localhost:8080',
-           'chrome-extension://ckndbdjoogkmkledkdfclanamfodcbpe']
+           'chrome-extension://ckndbdjoogkmkledkdfclanamfodcbpe',
+           'chrome-extension://hmjfaebolfifcpopioomhbpnpjgdcelb']
 
 app.add_middleware(
     CORSMiddleware,
