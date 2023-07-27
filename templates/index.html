@@ -9,7 +9,7 @@
             align-items: center;
             height: 100vh;
             font-family: 'Noto Serif Tibetan', serif;
-            background-color: #f0f0f5;
+            background: linear-gradient(to bottom right, #ff0066 13%, #6f00ff 96%);
             position: relative;
         }
         .container {
@@ -31,7 +31,7 @@
             font-size: 24px;
             border: none;
             border-radius: 5px;
-            background-color: #007BFF;
+            background-color: #2a8af1;
             color: white;
             cursor: pointer;
             box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
@@ -41,7 +41,7 @@
             vertical-align: middle;
         }
         #button:hover {
-            background-color: #0056b3;
+            background-color: #0da1eb;
         }
         #result {
             position: absolute;
@@ -49,6 +49,23 @@
             width: 100%;
             font-size: 35px;
             text-align: center;
+        }
+        @media (max-width:500px)
+        {
+            body{
+                width: 100%;
+                background: linear-gradient(to bottom right, #00ffff 0%, #ff33cc 100%);
+            }
+            button{
+                margin-top: 50px;
+           justify-content: center;
+           align-items: center;
+           display: flex;
+           background-color: black !important;
+            }
+            button:hover{
+                background-color: #6f00ff !important;
+            }
         }
     </style>
 </head>
