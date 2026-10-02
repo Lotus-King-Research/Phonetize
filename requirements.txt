@@ -1,6 +1,16 @@
-fastapi
-uvicorn
-jinja2
-bophono
-gunicorn
-starlette
+# Pinned to the dependency set current at this repo's last change (June 2023),
+# which the deployed service has run since. Newer Starlette (1.x) breaks the
+# TemplateResponse(name, context) call in main.py.
+fastapi==0.97.0
+starlette==0.27.0
+pydantic==1.10.9
+uvicorn==0.22.0
+jinja2==3.1.2
+markupsafe==2.1.3
+bophono==0.2.0
+anyio==3.7.0
+h11==0.14.0
+click==8.1.3
+typing-extensions==4.6.3
+sniffio==1.3.0
+idna==3.4
